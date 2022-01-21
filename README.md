@@ -18,7 +18,7 @@
 
 ---
 
-##Initialize project
+## Initialize project
 
 Opret nyt tomt projekt
 
@@ -28,7 +28,8 @@ alle andre kommandoer er i "Command"!!!
 
 ---
 
-##Server (node.js express projekt med port nummer)
+## Server (node.js express projekt med port nummer)
+
 I terminalen "Command" køres:
 
     (npm install -g express-generator)
@@ -59,7 +60,7 @@ I terminalen "Server" køres:
 
 ---
 
-##Router
+## Router
 
 (routers) <br>
 omdøb filerne index til web & users til api
@@ -105,7 +106,7 @@ navn rettes til navnet på endpointet
 
 ---
 
-##Templet engien
+## Templet engien
 
 I terminalen "Command" køres:<br>
 
@@ -204,35 +205,35 @@ For hvert uniked view skal der oprettes en .hbs fil i views mappen. (husk at nav
 
 ---  
 
-##Database opsætning
+## Database opsætning
 
 ---
 
-##CRUD
+## CRUD
 
 
 
-
-
----
-
-##Session
 
 
 ---
 
-##Cookie
+## Session
 
-##Import JSON
-
----
-
-##Export JSON
 
 ---
 
-##Brug af API
+## Cookie
+
+## Import JSON
 
 ---
 
-##Tilbud af API
+## Export JSON
+
+---
+
+## Brug af API
+
+---
+
+## Tilbud af API

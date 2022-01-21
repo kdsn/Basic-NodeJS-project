@@ -222,6 +222,8 @@ For hvert uniked view skal der oprettes en .hbs fil i views mappen. (husk at nav
 
 ## Cookie
 
+---
+
 ## Import JSON
 
 ---

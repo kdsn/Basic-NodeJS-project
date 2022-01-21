@@ -1,8 +1,5 @@
 # Basic NodeJS project
 
----
-
-
 ### Indhold:
 - [Indledende opsætning](https://github.com/kdsn/Basic-NodeJS-project/blob/master/README.md#initialize-project)
 - [Server opsætning](https://github.com/kdsn/Basic-NodeJS-project/blob/master/README.md#server-nodejs-express-projekt-med-port-nummer)

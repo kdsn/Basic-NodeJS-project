@@ -127,7 +127,7 @@ app.set('views', path.join(__dirname, 'views'));
 (views)<br>
 I views folderen laves en layouts folder & .jade filer slettes.
 
-(views/layout)<br>
+(views/layouts)<br>
 Opret main.hbs i layouts folderen og indsæt:
 
 ```html
@@ -204,6 +204,8 @@ For hvert uniked view skal der oprettes en .hbs fil i views mappen. (husk at nav
 ---  
 
 ## Database opsætning
+
+
 
 ---
 

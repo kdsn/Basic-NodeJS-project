@@ -205,7 +205,9 @@ For hvert uniked view skal der oprettes en .hbs fil i views mappen. (husk at nav
 
 ## Database opsætning
 
-
+```node
+const MONGODB_URI = 'mongodb+srv://<user>:<password>@<server>';
+```
 
 ---
 

@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
 const mongoose = require('mongoose');
 const Console = require("console");
 
+const MONGODB_URI = 'mongodb+srv://';
 
 mongoose.connect(MONGODB_URI).then(r =>
   mongoose.connection.on('connected', () => {

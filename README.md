@@ -204,6 +204,9 @@ For hvert uniked view skal der oprettes en .hbs fil i views mappen. (husk at nav
 ---  
 
 ## Database opsætning
+Som det aller første tilgås myip.com (eller lignende side) for at finde den offentlige ip adresse.
+Der efter logges ind på https://cloud.mongodb.com, og klik på "Network Access" i sidemenuen. 
+Kontroller at den offentlige ip adresse er på listen, hvis ikke, så tilføj den!
 
 ```node
 const MONGODB_URI = 'mongodb+srv://<user>:<password>@<server>';
@@ -226,6 +229,9 @@ const MONGODB_URI = 'mongodb+srv://<user>:<password>@<server>';
 
 ## Cookie
 
+
+
+
 ---
 
 ## Import JSON
@@ -241,3 +247,13 @@ const MONGODB_URI = 'mongodb+srv://<user>:<password>@<server>';
 ---
 
 ## Tilbud af API
+
+
+
+## Fejlfinding
+
+Hvis en fil er omdøbt, så skal serveren genstertes (ctrl + c -> npm start)
+
+Hvis der i terminalen "Server" kommer fejl 404, så start med at kontroller placeringen af filen der refereres til. Den ligger sandsynligvis ikke i den forventede mappe.
+
+Hvis der er fejl i forhold til databasen, start med at kontrollere at ip adressen programmet køres fra er godkendt, og at der benyttes den korekte connections string.

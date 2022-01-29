@@ -1,16 +1,41 @@
 var express = require('express');
 var router = express.Router();
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+
+const middleware = require('../middleware');
+
+router.get('/cookie-set', function(req, res, next) {
+
+    res.cookie('session_id', 'ac')
+        .status(200)
+        .render('index', { title: 'Cookie set', msg: 'Alt ok, sessionen er sat' })
+
+});
+
+router.get('/cookie-read', middleware.validateCookie, function(req, res, next) {
+
+    const {cookies} = req;
+    var myCookie = cookies.session_id;
+
+    res.status(200)
+        .render('index', { title: 'Cookie read', msg: myCookie })
+
+});
+
+
+
 /* Database connection start */
 const mongoose = require('mongoose');
 const Console = require("console");
+const cookieParser = require("cookie-parser");
 
-const MONGODB_URI = 'mongodb+srv://';
+const MONGODB_URI = 'mongodb+srv://<username>:<password>@<host>';
 
 mongoose.connect(MONGODB_URI).then(r =>
   mongoose.connection.on('connected', () => {

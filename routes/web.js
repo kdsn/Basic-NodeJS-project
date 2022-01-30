@@ -8,6 +8,44 @@ router.get('/', function(req, res, next) {
 });
 
 
+/* POST home page. */
+router.post('/', function(req, res, next) {
+    res.render('index', { title: 'Express' });
+});
+
+
+
+/* API router */
+router.get('/kontakter', function(req, res, next) {
+    res.status(200).send('Operation gennemført');
+});
+router.post('/kontakter', function(req, res, next) {
+    res.status(200).send('Operation gennemført');
+});
+router.put('/kontakter', function(req, res, next) {
+    res.status(200).send('Operation gennemført');
+});
+router.delete('/kontakter', function(req, res, next) {
+    res.status(200).send('Operation gennemført');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const middleware = require('../middleware');
 
 router.get('/cookie-set', function(req, res, next) {
@@ -32,14 +70,12 @@ router.get('/cookie-read', middleware.validateCookie, function(req, res, next) {
 
 /* Database connection start */
 const mongoose = require('mongoose');
-const Console = require("console");
-const cookieParser = require("cookie-parser");
 
-const MONGODB_URI = 'mongodb+srv://<username>:<password>@<host>';
+const MONGODB_URI = 'mongodb+srv://user-la:VjXgC0WpoZz8UsPW@cluster0.ogvej.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 mongoose.connect(MONGODB_URI).then(r =>
   mongoose.connection.on('connected', () => {
-    Console.log('Connected to Atlas');
+    console.log('Connected to Atlas');
   })
 );
 /* Database connection end */
@@ -58,7 +94,7 @@ var UserData = mongoose.model('UserData', userDataSchema);
 
 /* Database route start */
 router.get('/db', function(req, res, next) {
-  res.render('db', { title: 'Database test' });
+  res.render('index', { title: 'Database test' });
 });
 
 router.get('/get-data', function(req, res, next) {

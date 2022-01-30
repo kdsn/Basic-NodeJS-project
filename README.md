@@ -149,28 +149,31 @@ Opret main.hbs i layouts folderen og indsæt:
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="/">Eksamen</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/registrer">Registration</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/beskeder">Beskeder</a>
-                    </li>
-                </ul>
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Eksamen</a>
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/registrer">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/beskeder">Beskeder</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-
+        </nav>
+    </div>
+</header>
     <main class="container my-5">
 
     {{{ body }}}
@@ -207,6 +210,8 @@ For hvert uniked view skal der oprettes en .hbs fil i views mappen. (husk at nav
 Som det aller første tilgås myip.com (eller lignende side) for at finde den offentlige ip adresse.
 Der efter logges ind på https://cloud.mongodb.com, og klik på "Network Access" i sidemenuen. 
 Kontroller at den offentlige ip adresse er på listen, hvis ikke, så tilføj den!
+
+
 
 ```node
 const MONGODB_URI = 'mongodb+srv://<user>:<password>@<server>';

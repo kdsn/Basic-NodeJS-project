@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const myAPIcontroller = require('controllers/myAPIcontroller');
+
+router.get('/', myAPIcontroller.listMyAPI);
+router.post('/', myAPIcontroller.listMyAPI);
+router.put('/', myAPIcontroller.listMyAPI);
+router.delete('/', myAPIcontroller.listMyAPI);
 
 module.exports = router;
